@@ -43,9 +43,11 @@ function main() {
                 container.appendChild(newDiv);
                 newDiv.addEventListener('mouseover', () => {
                         newDiv.style['background-color'] = 'black';
+                        newDiv.style.color = 'black';
                 });
                 clearButton.addEventListener('click', () => {
                         newDiv.style['background-color'] = 'rgb(243, 226, 204)';
+                        newDiv.style.color = 'rgb(243, 226, 204)';
                 });
         }
 }
