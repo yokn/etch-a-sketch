@@ -36,14 +36,16 @@ function main() {
 
         for (let i = 1; i <= gridSize * gridSize; i += 1) {
                 const newDiv = document.createElement('div');
-                newDiv.textContent = `div ${i}`;
                 newDiv.className = 'newDiv';
+                newDiv.textContent = 'div';
+                const textSize = 350 / gridSize;
+                newDiv.style['font-size'] = `${textSize}px`;
                 container.appendChild(newDiv);
                 newDiv.addEventListener('mouseover', () => {
                         newDiv.style['background-color'] = 'black';
                 });
                 clearButton.addEventListener('click', () => {
-                        newDiv.style['background-color'] = 'white';
+                        newDiv.style['background-color'] = 'rgb(243, 226, 204)';
                 });
         }
 }
