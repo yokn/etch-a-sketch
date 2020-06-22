@@ -1,25 +1,26 @@
 body{
     background-color: rgb(243, 226, 204);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 .form{
     max-width: 520px;
 }
-
 input{
     margin: 5px;
 }
-
 .container{
     min-width: 480px;
-    min-height: 270px;
+    min-height: 480px;
     max-width: 480px;
-    max-height: 270px;
-    align-items: center;
-    justify-items: center;
-    
+    max-height: 480px;
+    border: 5px solid gray;
+    background-color: white;
 }
 .newDiv {
-   border: 0px;
-   margin: 0px;
-   color:  rgb(243, 226, 204);
+    border: 0px;
+    margin: 0px;
+    color:  white;
 }

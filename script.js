@@ -1,5 +1,3 @@
-// TODO: Be careful with borders and margins, they can adjust the size of the squares!
-
 let gridSize = 16;
 
 const body = document.querySelector('body');
@@ -37,17 +35,20 @@ function main() {
         for (let i = 1; i <= gridSize * gridSize; i += 1) {
                 const newDiv = document.createElement('div');
                 newDiv.className = 'newDiv';
-                newDiv.textContent = 'div';
-                const textSize = 350 / gridSize;
-                newDiv.style['font-size'] = `${textSize}px`;
+                newDiv.textContent = '"""'; // lol
+                const textSize = 250 / gridSize;
+                newDiv.style['font-size'] = `${textSize}px`; // idk if this is genius or dumb
+                // causes overflow vvv
+                // const borderSize = 10 / textSize;
+                // newDiv.style.border = `${borderSize}px solid white`;
                 container.appendChild(newDiv);
                 newDiv.addEventListener('mouseover', () => {
                         newDiv.style['background-color'] = 'black';
                         newDiv.style.color = 'black';
                 });
                 clearButton.addEventListener('click', () => {
-                        newDiv.style['background-color'] = 'rgb(243, 226, 204)';
-                        newDiv.style.color = 'rgb(243, 226, 204)';
+                        newDiv.style['background-color'] = 'white';
+                        newDiv.style.color = 'white';
                 });
         }
 }
